@@ -1,0 +1,24 @@
+#Mise en contexte
+n serveur, le CX43 de chez Hetzner, jarrive a me connecter dessus jai installer jdk21, et concernant docker jai installe ca :
+Docker Engine ✔️
+
+Docker CLI ✔️
+
+Docker Compose Plugin ✔️
+
+Connexion Docker Hub ✔️
+
+Test "hello-world" validé ✔️
+
+la je veux lancer mes docker (daillerus il me manque un docker nginx, je ne devrais pas exposer mes ports docker
+de facon public, faudrait que le seul point d'entrée soit le docker nginx pour des raison de securité
+avec comme point d'entrée uniquement du ssl, avec un redicrection a partir de https://turbo-transcendance
+un truc comme ca tu sais. la je devrais commencer par quoi ? deja il faudrait que je puisse lancer mes docker
+via mon serveur hetzner, comment fais il pour y avoir acces, le serveur je lai pris pour avoir tout mes docker
+qui tourne dessus, sur mon mac pro je veux uniquement mon ide intellij ultimate et coder dessus, mais ensuite tout run
+depuis le serveur via ssh, et avoir mon browser depuis mon mac aussi mais c tout, c pour l'alléger
+
+tu peux me faire ca, tu modifie rien dans mes fichier comme d'hab, je veux juste que tu me dises et m'expliques quoi
+faire, je suis debutant jai besoin de details stp
+
+ssh userdev@46.224.45.217
