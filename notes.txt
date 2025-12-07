@@ -60,3 +60,7 @@ sudo lsof -i :5432
 
  \dt -- list of relation
 select * from mma; --select * from ${name};
+
+# GIT
+git fetch --all
+git reset --hard origin/main #Ecraser ses modifs locales par la version origin/main du repos
