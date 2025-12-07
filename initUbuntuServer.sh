@@ -37,3 +37,22 @@ docker run hello-world
 
 # Install JDK21 for springboot
 sudo apt install -y openjdk-21-jdk
+
+#Install git
+sudo apt update
+sudo apt install -y git
+git --version
+
+# install vim
+sudo apt update
+sudo apt install -y vim
+vim --version
+
+# Certifs de secu Certbot
+
+  #lunch le docker nginx sans ses depends on, il faut que nginx soit lunch pour pouvoir ensuite genrer les certifs
+  docker compose -f docker-compose-dev.yml up -d --no-deps nginx
+  #  install les certifs de secu Certbot
+  docker compose -f docker-compose-dev.yml run --rm certbot certonly   --webroot -w /var/www/certbot   -d 46.224.45.217.sslip.io   --email userdev@46.224.45.217.sslip.io --agree-tos --no-eff-email
+  curl -I http://46.224.45.217.sslip.io/.well-known/acme-challenge/test
+

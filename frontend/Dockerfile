@@ -1,12 +1,16 @@
+# Utilise une version Node adaptée
 FROM node:20-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+# On copie uniquement les fichiers de dépendances
+COPY package.json package-lock.json ./
+
+# On installe les librairies (node_modules)
 RUN npm install
 
-COPY . .
+# ATTENTION : On ne fait PAS de "COPY . ." ici.
+# Le code source sera apporté par le volume du docker-compose.
 
-EXPOSE 5173
-
-CMD ["npm", "run", "dev"]
+# Commande par défaut (sera souvent surchargée par le docker-compose, mais utile au cas où)
+CMD ["npm", "run", "dev", "--", "--host"]

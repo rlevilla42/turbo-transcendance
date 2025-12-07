@@ -23,6 +23,9 @@ sudo docker run hello-world
 docker exec -it <container name> /bin/bash // don't create new instance
 docker compose up --build -d
 
+#turbo lunch
+docker compose -f docker-compose-dev.yml up -d --build --remove-orphans
+
 # Script initialisation of SQL MYSQL_DATABASE run mysqld
 SHOW DATABASES;
 SHOW DATABASES LIKE 'main_db';
