@@ -15,4 +15,8 @@ export default defineConfig({
       },
     }),
   ],
+    server: {
+      host: true,
+        allowedHosts: ['46.224.45.217.sslip.io'],
+    }
 });
