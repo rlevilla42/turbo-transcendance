@@ -4,7 +4,7 @@ FROM node:20-alpine
 WORKDIR /app
 
 # On copie uniquement les fichiers de dépendances
-COPY package.json package-lock.json ./
+COPY ../frontend_old/package.json package-lock.json ./
 
 # On installe les librairies (node_modules)
 RUN npm install

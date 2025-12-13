@@ -1,132 +1,193 @@
-# 🚀 Turbo Transcendance
+# TailAdmin React - Free React Tailwind Admin Dashboard Template
 
-Turbo Transcendance est un projet full-stack ambitieux inspiré du sujet `ft_transcendence` de l'école 42, combinant **authentification sécurisée**, **jeu multijoueur (Pong)**, **chat en temps réel**, **profils utilisateurs** et une **infrastructure DevOps complète**.
+TailAdmin is a free and open-source admin dashboard template built on **React and Tailwind CSS**, providing developers
+with everything they need to create a comprehensive, data-driven back-end,
+dashboard, or admin panel solution for upcoming web projects.
 
----
+With TailAdmin, you get access to all the necessary dashboard UI components, elements, and pages required to build a
+feature-rich and complete dashboard or admin panel. Whether you're building dashboard or admin panel for a complex web
+application or a simple website, TailAdmin is the perfect solution to help you get up and running quickly.
 
-## 🧱 Stack Technique
+![TailAdmin React.js Dashboard Preview](./banner.png)
 
-### Frontend
-- **React** + **TypeScript** (avec Vite)
-- Routing protégé via `react-router-dom`
-- Authentification avec **JWT**
-- Gestion de l'état avec `useState` et `useEffect`
-- **socket.io-client** pour le chat et le jeu temps réel
+## Overview
 
-### Backend
-- **Java** avec **Spring Boot**
-- Authentification sécurisée avec **JWT**
-- REST API (login, register, `/me`, etc.)
-- **PostgreSQL** comme base de données principale
-- (à venir) WebSocket server pour le chat et le jeu
+TailAdmin provides essential UI components and layouts for building feature-rich, data-driven admin dashboards and
+control panels. It's built on:
 
-### DevOps & Infra
-- **Docker** (frontend, backend, PostgreSQL)
-- Fichier `.env` centralisé pour toutes les variables d'environnement
-- (à venir) CI/CD, monitoring, reverse proxy (Nginx), HTTPS, OAuth2, 2FA
+- React 19
+- TypeScript
+- Tailwind CSS v4
 
----
+### Quick Links
 
-## 📚 Fonctionnalités prévues
+- [✨ Visit Website](https://tailadmin.com)
+- [📄 Documentation](https://tailadmin.com/docs)
+- [⬇️ Download](https://tailadmin.com/download)
+- [🖌️ Figma Design File (Community Edition)](https://www.figma.com/community/file/1214477970819985778)
+- [⚡ Get PRO Version](https://tailadmin.com/pricing)
 
-### 🔐 Authentification
-- [x] Register / Login
-- [x] Stockage du token JWT
-- [x] Redirection automatique après login
-- [x] Navbar dynamique selon le statut connecté
-- [x] Protection des routes avec `RequireAuth`
-- [ ] 2FA / MFA
-- [ ] OAuth2 (connexion via 42, Google...)
+### Demos
 
-### 🧑‍💻 Frontend (React)
-- [x] Pages : `Home`, `Login`, `Register`, `Me`, `Dashboard`
-- [x] Redirection post-login vers la route demandée
-- [x] `Navbar` avec menu déroulant conditionnel
-- [ ] `Chat` en temps réel (avec socket.io)
-- [ ] `Pong` multijoueur (canvas + WebSocket)
-- [ ] Système d'amis, invitations de partie
-- [ ] Système de classement / leaderboard
-- [ ] Design responsive et épuré
+- [Free Version](https://free-react-demo.tailadmin.com/)
+- [Pro Version](https://react-demo.tailadmin.com)
 
-### 🖥 Backend (Spring Boot)
-- [x] Login / Register avec vérification sécurisée
-- [x] Endpoint `/me` sécurisé avec JWT
-- [ ] WebSocket intégré pour le chat
-- [ ] Gestion des parties Pong (matchmaking, score, etc.)
-- [ ] Gestion des amis et du statut en ligne
+### Other Versions
 
-### 🐳 DevOps
-- [x] Dockerisation frontend / backend / DB
-- [x] Hot reload frontend et backend
-- [ ] CI/CD avec GitHub Actions ou GitLab CI
-- [ ] Monitoring (Prometheus, Grafana)
-- [ ] HTTPS, reverse proxy avec Nginx
+- [HTML Version](https://github.com/TailAdmin/tailadmin-free-tailwind-dashboard-template)
+- [Next.js Version](https://github.com/TailAdmin/free-nextjs-admin-dashboard)
+- [Vue.js Version](https://github.com/TailAdmin/vue-tailwind-admin-dashboard)
+- [Angular Version](https://github.com/TailAdmin/free-angular-tailwind-dashboard)
+- [Laravel Version](https://github.com/TailAdmin/tailadmin-laravel)
 
----
+## Installation
 
-## 🔄 Navigation
+### Prerequisites
 
-| Page        | Route        | Accès     |
-|-------------|--------------|-----------|
-| Accueil     | `/`          | Public    |
-| Login       | `/login`     | Public    |
-| Register    | `/register`  | Public    |
-| Dashboard   | `/dashboard` | Privée    |
-| Mon profil  | `/me`        | Privée    |
-| Chat        | `/chat`      | Privée    |
-| Pong        | `/pong`      | Privée    |
+To get started with TailAdmin, ensure you have the following prerequisites installed and set up:
 
----
+- Node.js 18.x or later (recommended to use Node.js 20.x or later)
 
-## 🧠 Contexte pour Junie (ou tout assistant IA)
+### Cloning the Repository
 
-Ce projet repose sur une progression **étape par étape**, avec des explications détaillées et des imports codés proprement.  
-Junie doit toujours :
-- Prioriser la sécurité (ex : vérifier la validité du token JWT)
-- Protéger les routes sensibles avec `RequireAuth`
-- Gérer le code frontend **dans `frontend/src/pages/`**
-- Etendre le projet à terme avec WebSocket, Pong et Chat
-- Éviter toute logique frontend côté backend (Java)
-- S’assurer de la cohérence entre le contenu de `localStorage` et les routes affichées
-- Conserver l’état d’auth avec un futur `AuthContext`
+Clone the repository using the following command:
 
----
+```bash
+git clone https://github.com/TailAdmin/free-react-tailwind-admin-dashboard.git
+```
 
-## 📦 Dossier `frontend/`
+> Windows Users: place the repository near the root of your drive if you face issues while cloning.
 
-- `App.tsx` : définition des routes
-- `pages/` : tous les composants de pages
-- `services/` : auth et WebSocket
-- `RequireAuth.tsx` : protection des routes privées
-- `.env` : variables comme `VITE_BACKEND_URL`
+1. Install dependencies:
 
----
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-## 📦 Dossier `backend/` (Spring Boot)
 
-- `AuthController`, `JwtUtil`, etc.
-- Gestion de `/login`, `/register`, `/me`
-- Configuration sécurité Spring
-- Connexion PostgreSQL via `application.properties`
+2. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
----
+## Components
 
-## ✅ État actuel (juillet 2025)
+TailAdmin is a pre-designed starting point for building a web-based dashboard using React.js and Tailwind CSS. The
+template includes:
 
-- ✅ Auth sécurisée et fonctionnelle
-- ✅ Redirection post-login
-- ✅ Docker fonctionnel (dev env)
-- 🟡 WebSocket pas encore implémenté
-- 🟡 Pages Pong et Chat présentes mais vides
-- ❌ Pas encore de logique temps réel ni de matchmaking
+- Sophisticated and accessible sidebar
+- Data visualization components
+- Prebuilt profile management and 404 page
+- Tables and Charts(Line and Bar)
+- Authentication forms and input elements
+- Alerts, Dropdowns, Modals, Buttons and more
+- Can't forget Dark Mode 🕶️
 
----
+All components are built with React and styled using Tailwind CSS for easy customization.
 
-## ✨ Objectif final
+## Feature Comparison
 
-Une app **temps réel** gamifiée, sécurisée, performante et dockerisée :
-- 🎮 Jouer à Pong contre d’autres utilisateurs
-- 💬 Chatter en live avec les joueurs
-- 🧑‍🤝‍🧑 Voir qui est connecté, ajouter en ami, défier
-- 📊 Suivre ses stats et son classement
+### Free Version
 
+- 1 Unique Dashboard
+- 30+ dashboard components
+- 50+ UI elements
+- Basic Figma design files
+- Community support
+
+### Pro Version
+
+- 7 Unique Dashboards: Analytics, Ecommerce, Marketing, CRM, SaaS, Stocks, Logistics (more coming soon)
+- 500+ dashboard components and UI elements
+- Complete Figma design file
+- Email support
+
+To learn more about pro version features and pricing, visit our [pricing page](https://tailadmin.com/pricing).
+
+## Changelog
+
+### Version 2.0.2 - [March 25, 2025]
+
+- Upgraded to React 19
+- Included overrides for packages to prevent peer dependency errors.
+- Migrated from react-flatpickr to flatpickr package for React 19 support
+
+### Version 2.0.1 - [February 27, 2025]
+
+#### Update Overview
+
+- Upgraded to Tailwind CSS v4 for better performance and efficiency.
+- Updated class usage to match the latest syntax and features.
+- Replaced deprecated class and optimized styles.
+
+#### Next Steps
+
+- Run npm install or yarn install to update dependencies.
+- Check for any style changes or compatibility issues.
+- Refer to the Tailwind CSS v4 [Migration Guide](https://tailwindcss.com/docs/upgrade-guide) on this release. if needed.
+- This update keeps the project up to date with the latest Tailwind improvements. 🚀
+
+### Version 2.0.0 - [February 2025]
+
+A major update with comprehensive redesign and modern React patterns implementation.
+
+#### Major Improvements
+
+- Complete UI redesign with modern React patterns
+- New features: collapsible sidebar, chat, and calendar
+- Improved performance and accessibility
+- Updated data visualization using ApexCharts
+
+#### Key Features
+
+- Redesigned dashboards (Ecommerce, Analytics, Marketing, CRM)
+- Enhanced navigation with React Router integration
+- Advanced tables with sorting and filtering
+- Calendar with drag-and-drop support
+- New UI components and improved existing ones
+
+#### Breaking Changes
+
+- Updated sidebar component API
+- Migrated charts to ApexCharts
+- Revised authentication system
+
+[Read more](https://tailadmin.com/docs/update-logs/react) on this release.
+
+### Version 1.3.7 - [June 20, 2024]
+
+#### Enhancements
+
+1. Remove Repetition of DefaultLayout in every Pages
+2. Add ClickOutside Component for reduce repeated functionality in Header Message, Notification and User Dropdowns.
+
+### Version 1.3.6 - [Jan 31, 2024]
+
+#### Enhancements
+
+1. Integrate flatpickr in [Date Picker/Form Elements]
+2. Change color after select an option [Select Element/Form Elements].
+3. Make it functional [Multiselect Dropdown/Form Elements].
+4. Make best value editable [Pricing Table One/Pricing Table].
+5. Rearrange Folder structure.
+
+### Version 1.2.0 - [Apr 28, 2023]
+
+- Add Typescript in TailAdmin React.
+
+### Version 1.0.0 - Initial Release - [Mar 13, 2023]
+
+- Initial release of TailAdmin React.
+
+## License
+
+TailAdmin React.js Free Version is released under the MIT License.
+
+## Support
+
+If you find this project helpful, please consider giving it a star on GitHub. Your support helps us continue developing
+and maintaining this template.
